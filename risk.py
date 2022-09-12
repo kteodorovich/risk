@@ -4,10 +4,10 @@ from tqdm import tqdm
 def sim_attack(a, d):
   if a > 3:
     a = 3
-  attack = [random.randint(1, 7) for i in range(a)]
+  attack = [random.randint(1, 6) for i in range(a)]
   attack.sort(reverse=True)
 
-  defs = [random.randint(1, 7) for i in range(d)]
+  defs = [random.randint(1, 6) for i in range(d)]
 
   return all(attack[i] > defs[i] for i in range(d))
 
